@@ -27,11 +27,15 @@ if ($result->num_rows > 0) {
             <td>".$row["longueur"]."</td>
             
             <td>
-                <form action ='delete_circuit.php' method='post'>
-                <input type='hidden' name='id' value=".$row['id'].">
-                <input type='submit' value='Supprimer'>
-                </form>
-            </td>
+    <form action='delete_circuit.php' method='post'>
+        <input type='hidden' name='id' value=".$row['id'].">
+        <input type='submit' value='Supprimer'>
+    </form>
+    <form action='edit_circuit.php' method='get'>
+        <input type='hidden' name='id' value=".$row['id'].">
+        <input type='submit' value='Modifier'>
+    </form>
+</td>
             </tr>";
 
     }

@@ -11,6 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
     if ($conn->query($sql) === TRUE) {
         echo "Record deleted successfully";
+        header('Location: index.php');
     } else {
         echo "Error deleting record: ". $conn->error;
     }

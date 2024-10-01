@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($conn->query($sql) === TRUE) {
         echo "Nouveau circuit créé avec succès";
+        header('Location: index.php');
     } else {
         echo "Error: ". $sql. "<br>". $conn->error;
     }
