@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ajouter un nouveau cicruit</title>
+    </head>
+
+    <body>
+        <h2>Ajouter un nouveau cicruit</h2>
+        <form action="process_cuircuit.php" method="POST">
+            <label for="nom">Nom du cicruit:</label>
+            <input type="text" id="nom" name="nom" required />
+            <label for="pays">Pays:</label>
+            <input type="text" id="pays" name="pays" required />
+            <label for="annee">Annee:</label>
+            <input type="number" id="annee" name="annee" min="1900" max="2021" required />
+            <label for="longueur">longueur</label>
+            <input type="number" id="longueur" name="longueur" required />
+            <input type="submit" value="Ajouter" metho />
+        </form>
+    </body>
+</html>
