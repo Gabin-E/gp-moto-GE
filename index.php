@@ -5,7 +5,7 @@ include 'connexion.php';
 // Requête SQL pour sélectionner les données
 $sql = "SELECT id, nom, pays, annee, longueur FROM circuit";
 $result = $conn->query($sql);
-
+echo "<h1> circuit </h1>";
 if ($result->num_rows > 0) {
     // Afficher les données de chaque ligne
     echo"<table border='1'>
@@ -25,7 +25,15 @@ if ($result->num_rows > 0) {
             <td>".$row["pays"]."</td>
             <td>".$row["annee"]."</td>
             <td>".$row["longueur"]."</td>
+            
+            <td>
+                <form action ='delete_circuit.php' method='post'>
+                <input type='hidden' name='id' value=".$row['id'].">
+                <input type='submit' value='Supprimer'>
+                </form>
+            </td>
             </tr>";
+
     }
 
     echo "</table>";
